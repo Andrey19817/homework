@@ -1,75 +1,60 @@
-// 1. ПОЛЬЗОВАТЕЛЬ ВВОДИТ ВОЗРАСТ ФЕДОТА и МИТРОФАНА
-// выяснить кто старше фдеот или митрофан и НА СКОЛЬКО старше
-// (возрасты могут быть равны)
-// вывести результат в консоль
-
-// 2. Пользователь вводит три числа, выяснить наибольшее из них
-
-// 3. пользователь вводит 4 числа
-// выяснить СКОКЛЬКО из этих чисел были четными
+// 1. Пользователь вводит число n. Написать цикл, который выводит все числа от n до 0.
+    // let n=+prompt('введите число','');
+    // while(n>=0){
+    //     console.log(n);
+    //     n--;
+    // }
 
 
-// 1.
-// let mitrofanAge = prompt('mitrofan');
-// let fedotAge = prompt('fedot');
 
-// if ( isNaN(mitrofanAge) || isNaN(fedotAge) ) {
-//     console.log('incrorrect data');
-// } else if ( mitrofanAge === null || fedotAge === null ) {
-//     console.log('you cancelled');
-// } else {
-//     mitrofanAge = +mitrofanAge;
-//     fedotAge = +fedotAge;
 
-//     const ageDifference = Math.abs(mitrofanAge - fedotAge);
+// 2. Написать программу, которая выводит на экран
+// двузначные числа, которые делятся на 4, но не
+// делятся на 6.
 
-//     if ( mitrofanAge > fedotAge ) {
-//         console.log(`Mitrofan is older than Fedot by ${ageDifference} years`);
-//     } else if (fedotAge > mitrofanAge) {
-//         console.log(`Fedot is older than Mitrofan by ${ageDifference} years`);
-//     } else {
-//         console.log('Their ages are equal');
+    // for(let n=10;n<100;n++){
+    //     if(n % 4===0 && n % 6 !==0){
+    //         console.log(n);
+    //     }
+        
+    // }
+        
+    
+    
+    
+    
+
+
+// 3. Написать программу, которая определяет количество
+// положительных, отрицательных чисел и нулей. В
+// начале программы, пользователь самостоятельно
+// задает какое количество чисел будет вводить, затем
+// вводит сами числа.
+// Пример вывода:
+// «Положительных: 2 шт.
+// Отрицательных: 5 шт.
+// Нулей: 3 шт.»
+
+
+// let a=+prompt('сколько положительных чисел вы введете ?','');
+// let a1=prompt('введите положительные числа','');
+// let b=+prompt('сколько отрицательный чисел вы введете ?','');
+// let b1=prompt('количество отрицательных чисел','');
+// let c=+prompt('какое количество нулей вы введете ?','');
+// let c1=prompt('количество нулей','');
+// if(isNaN(a1) || isNaN(b1) || isNaN(c1) || isNaN(a) || isNaN(b) || isNaN(c)){
+//     alert('это не числа');
+// }else{
+ 
+//     if(a>a1.length || a<a1.length){
+//         alert('вы указали другое количество положительных чисел...');
+//     }else{
+//         if(b>b1.length || b<b1.length){
+//             alert('вы указали другое количество отрицательных чисел...');
+//         }else if(c>c1.length || c<c1.length || Number(c1)>0){
+//             alert('вы указали другое количество нулей...или не нулей вовсе...');
+//         }else{
+//             alert(`вы ввели ${a1.length} положительных,;${b1.length} отрицательных и ${c1.length} нуля(ей)`);
+//     }
 //     }
 // }
-
-
-// 2.
-
-// let a = +prompt('one');
-// let b = +prompt('two');
-// let c = +prompt('three');
-
-// if (a >= c && a >= b) {
-//     console.log(a);
-// } else if (b > a && b > c) {
-
-// } else {
-
-// }
-
-// 3. 
-// let a = +prompt('one'); // 1
-// let b = +prompt('two'); // 2
-// let c = +prompt('three'); // 1
-// let d = +prompt('four'); // 2
-
-// let evenCounter = 0;
-
-// if (a % 2 === 0) {
-//     evenCounter++;
-// }
-
-// if (b % 2 === 0) {
-//     evenCounter++;
-// }
-
-// if (c % 2 === 0) {
-//     evenCounter++;
-// }
-
-// if (d % 2 === 0) {
-//     evenCounter++;
-// }
-
-// console.log(evenCounter);
-console.log(a+b);
