@@ -151,3 +151,167 @@
 
 // })
 // console.log(arr);
+
+// =====================DZ-7=============================
+
+
+// 1. Дан объект:
+// var person = {
+// name:’Pablo Picasso’
+// }
+// Создайте функцию addName(obj, name), которая
+// добавляет в список имя name, но только если его там еще
+// нет:
+// addName(person, 'Garcia');
+// // person.name=>'Pablo Picasso Garcia'
+// addName(person, 'Pablo');
+// // без изменений (имя уже существует)
+// addName(person, 'Rodrigez');
+// // person.name=>'Pablo Picasso Garcia Rodrigez'
+
+
+
+// let person = {
+//     name:'Pablo Picasso',
+//     }
+    
+// function addName(obj, name){
+//     for(let key in obj){
+//         let arr=obj[key].split(' ');
+//         if(arr.indexOf(name)===-1){
+//             obj[key]=obj[key]+' '+name;
+//         }
+//         return console.log(obj);
+//     }
+//         };
+    
+// addName(person,'Garcia');
+// addName(person,'rodriges');
+// addName(person,'panco');
+// addName(person,'Garcia');
+// addName(person,'jhkjph');
+// addName(person,'Garcia');
+// addName(person,'rodriges');
+
+
+// ===================================================
+
+
+// 2. Дан объект:
+// let person = {
+//     name: 'Pablo Picasso Garcia Rodrigez'
+//     }
+// Создайте функцию removeName(obj, name), которая
+// удаляет из имени слово name, но только если оно там есть:
+// removeName(person, 'Garcia');
+// // person.name=>'Pablo Picasso Rodrigez '
+// removeName(person, 'Akakij');
+// // без изменений (такого имени нет)
+// removeName(person, 'Rodrigez');
+// // obj.name=>'Pablo Picasso'
+
+// let person = {
+//     name: 'Pablo Picasso Garcia Rodrigez'
+//     };
+
+//     function  removeName(obj, name){
+//         for(let key in obj){
+//             let arr=obj[key].split(' ');
+//             if(arr.indexOf(name)===-1){
+//                 break;
+//             }else{
+//             arr.splice(arr.indexOf(name),1);
+//             obj[key]=arr.join(' ')
+//             }
+            
+//         } return console.log(obj);
+//     }
+//     removeName(person,'Akakij');
+//     removeName(person,'Rodrigez');
+//     removeName(person,'Garcia');
+//     removeName(person,'Pablo');
+// =================================================================
+
+// 3. Существует массив(длина: 4) футболистов (каждый
+// футболист – это объект). Напишите функцию
+// addAbility(array), которая добавляет к каждому
+// объекту массива функцию run(), при запуске которой
+// выводится сообщение (“ИМЯ_ФУТБОЛИСТА is
+// running”)
+
+// let futbollist=[
+//     {
+//         name:'Pablo'
+//     },
+//     {
+//       name:'Garcia'  
+//     },
+//     {
+//         name:'Rodrigez'
+//     },
+//     {
+//         name:'Akakij'
+//     }
+// ];
+
+
+// function running(){
+//     console.log(`${this.name} is running`);
+// }
+// function addAbility(arr){
+//     arr.forEach((elem) => {elem.run = running})
+//     arr.forEach((elem) => {
+//         elem.run();
+//     });
+// }
+// addAbility(futbollist);
+
+
+// ====================================================================
+
+
+
+// 4. Напишите функцию, которая вычисляет длину линий в
+// стандартной двухмерной системе координат. Координаты
+// начала и конца линий должны храниться в объектах.
+//  Создайте три линии.
+//  Вычислите их длины с помощью функции
+//  Проверьте, могут ли три линии сформировать
+// треугольник
+// Помните:
+// Длину линии можно найти по теореме Пифагора.
+// Стороны могут сформировать треугольник если длина
+// каждой стороны треугольника должны быть меньше суммы
+// длин остальных сторон.
+
+// let line1=[{},{}];
+// let line2=[{},{}];
+// let line3=[{},{}];
+
+// function lengthLine(line,startX1,startY1,endX1,endY1){
+//     line[0].startX1=startX1;
+//     line[0].startY1=startY1;
+//     line[1].endX1=endX1;
+//     line[1].endY1=endY1;
+//     return console.log((endX1-startX1)**2 + (endY1-startY1)**2);
+// };
+
+
+// function triangleWill(){
+//     let sumLine1=line1[0].startX1 + line1[0].startY1;
+//     let sumLine2=line2[1].endX1 + line2[1].endY1;
+//     let sumLine3=line3[0].startX1 + line1[0].startY1;
+//     if(sumLine1===sumLine2 && sumLine2===sumLine3 && sumLine3===sumLine1){
+//         console.log(true);
+//     }else{
+//         console.log(false);
+//     }
+    
+// }
+// lengthLine(line1,2,2,4,4);
+// lengthLine(line2,4,4,2,2);
+// lengthLine(line3,2,2,4,4);
+// triangleWill();
+// console.log(line1);
+// console.log(line2);
+// console.log(line3);
