@@ -315,3 +315,155 @@
 // console.log(line1);
 // console.log(line2);
 // console.log(line3);
+
+
+// ====================DZ-8=====================================
+
+// 1. Напишите функцию, которая вычисляет длину линий в
+// стандартной двухмерной системе координат. Координаты
+// начала и конца линий должны храниться в объектах.
+//  Создайте три линии.
+//  Вычислите их длины с помощью функции
+//  Проверьте, могут ли три линии сформировать
+// треугольник
+// Помните:
+// Длину линии можно найти по теореме Пифагора.
+// Стороны могут сформировать треугольник если длина
+// каждой стороны треугольника должны быть меньше суммы
+// длин остальных сторон.
+
+
+
+// let line1=[{},{}];
+// let line2=[{},{}];
+// let line3=[{},{}];
+
+// function lengthLine(line,startX1,startY1,endX1,endY1){
+//     line[0].startX1=startX1;
+//     line[0].startY1=startY1;
+//     line[1].endX1=endX1;
+//     line[1].endY1=endY1;
+//     return console.log((endX1-startX1)**2 + (endY1-startY1)**2);
+// };
+
+
+// function triangleWill(){
+//     let sumLine1=line1[0].startX1 + line1[0].startY1;
+//     let sumLine2=line2[1].endX1 + line2[1].endY1;
+//     let sumLine3=line3[0].startX1 + line1[0].startY1;
+//     if(sumLine1===sumLine2 && sumLine2===sumLine3 && sumLine3===sumLine1){
+//         console.log(true);
+//     }else{
+//         console.log(false);
+//     }
+
+// }
+// lengthLine(line1,2,2,4,4);
+// lengthLine(line2,4,4,2,2);
+// lengthLine(line3,2,2,4,4);
+// triangleWill();
+// console.log(line1);
+// console.log(line2);
+// console.log(line3);
+
+
+
+// ============================================================
+
+// 2. Создать конструктор Car, который принимает параметры
+// model, color, price. Конструктор должен возвращать объект в
+// котором присутствуют вышеназванные поля со значениями.
+// Каждый представитель класса Car должен обладать методом
+// run() который выводит сообщение вида : MODEL + “ ” +
+// COLOR + ” is running”.
+
+
+// function running(){
+//     console.log(`MODEL + ${this.model} + COLOR ${this.color} + is running ${this.price}`);
+// }
+// function Car(model,color,price){
+//     this.model = model;
+//     this.color = color;
+//     this.price = price;
+//     this.run = running;
+//     this.run();
+//     return console.log(this);
+// };
+// let bmw = new Car('bmw','black','200000');
+// let mercedes = new Car('mercedes','red','150000');
+
+//почему функция вызывается сразу???
+
+// ========================================================================
+
+// 3. Создать конструктор Book, с помощью этого конструктора
+// создать массив из 8 книг (объектов). Каждая книга должна
+// представлять из себя объект, в котором есть три поля:
+// author, bookName, pageAmount.
+// Создать функцию getBiggerBook(), которая принимает
+// массив книг и возвращает ОДНУ книгу с наибольшим
+// количеством страниц
+
+// let arrBook = [];
+
+// function getBiggerBook(arrBook) {
+//     let maxPage = 0;
+//     let name = 0;
+//     for (let i = 0; i < arrBook.length; i++) {
+//         if (maxPage < arrBook[i].pageAmount) {
+//             maxPage = arrBook[i].pageAmount;
+//             name = arrBook[i].author;
+//         }
+//     }
+//     console.log(name);
+// }
+
+// function Book(author, bookName, pageAmount) {
+//     this.author = author;
+//     this.bookName = bookName;
+//     this.pageAmount = pageAmount;
+//     arrBook.push(this)
+// };
+// let book1 = new Book('author1', 'bookName1', 100);
+// let book2 = new Book('author2', 'bookName2', 200);
+// let book3 = new Book('author3', 'bookName3', 300);
+// let book4 = new Book('author4', 'bookName4', 400);
+// let book5 = new Book('author5', 'bookName5', 500);
+// let book6 = new Book('author6', 'bookName6', 600);
+// let book7 = new Book('author7', 'bookName7', 700);
+// let book8 = new Book('author8', 'bookName8', 800);
+
+// getBiggerBook(arrBook);
+
+
+
+// 4. Создать класс Timer, инстанс которого запускает таймер и выводит в консоль
+// прошедшее время в секундах (1 2 3 4 5 и тд)
+// инстанс должен обладать методами .start() .stop() которые запускают и останавливают таймер
+// а также методом .reset() который сбрасывает таймер на 0.
+// С помощью Timer вы должны создать несколько таймеров и убедится в том, что они 
+// работают независимо друг от друга.
+// останавливайте таймер через некоторое время после запуска с помощью setTimeout()
+
+
+
+// class Timer {
+//     seconds = 1;
+//     intervalId = null;
+//     start() {
+//         this.intervalId = setInterval(() => console.log(this.seconds++), 1000);
+//     }
+
+//     stop(timerId) {
+//         clearInterval(timerId)
+//     }
+
+//     reset() {
+//         this.seconds = 1;
+//         this.intervalId = null;
+//     }
+// }
+
+// let timer1 = new Timer();
+// timer1.start();
+// setTimeout(timer1.stop, 5000, timer1.intervalId);
